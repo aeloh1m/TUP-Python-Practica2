@@ -9,6 +9,11 @@ def maximo_basico(a: float, b: float) -> float:
         - No utilizar ELSE
         - No utilizar la función max
     """
+    if a > b: return a
+    if b > a: return b
+
+print(maximo_basico(10,5))
+print(maximo_basico(9, 18))
 
 
 # NO MODIFICAR - INICIO
@@ -24,7 +29,10 @@ def maximo_libreria(a: float, b: float) -> float:
     """Re-escribir utilizando el built-in max.
     Referencia: https://docs.python.org/3/library/functions.html#max
     """
+    return max(a, b)
 
+print(maximo_libreria(10, 5))
+print(maximo_libreria(9, 18))
 
 # NO MODIFICAR - INICIO
 assert maximo_libreria(10, 5) == 10
@@ -39,6 +47,12 @@ def maximo_ternario(a: float, b: float) -> float:
     """Re-escribir utilizando el operador ternario.
     Referencia: https://docs.python.org/3/reference/expressions.html#conditional-expressions # noqa: E501
     """
+    if(a > b): return a
+    else: return b
+
+
+print(maximo_ternario(10, 5))
+print(maximo_ternario(9, 18))
 
 
 # NO MODIFICAR - INICIO

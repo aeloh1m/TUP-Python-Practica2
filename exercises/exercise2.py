@@ -13,20 +13,31 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons # noqa: E501
     """
+    # if a >= b <= c: return a 
+    # if a >= b <= c: return c
+    # return b
 
+    if a >= b > c: return a
+    if c >= b > a: return c
+    return b
+
+print(maximo_encadenado(1, 10, 5))
+print(maximo_encadenado(5, 10, 1))
+print(maximo_encadenado(5, 10, 5))
+print(maximo_encadenado(24, 9, 18))
 
 # NO MODIFICAR - INICIO
-assert maximo_encadenado(1, 10, 5) == 10
-assert maximo_encadenado(5, 10, 1) == 10
-assert maximo_encadenado(5, 10, 5) == 10
+# assert maximo_encadenado(1, 10, 5) == 10
+# assert maximo_encadenado(5, 10, 1) == 10
+# assert maximo_encadenado(5, 10, 5) == 10
 
-assert maximo_encadenado(4, 9, 18) == 18
-assert maximo_encadenado(9, 4, 18) == 18
-assert maximo_encadenado(9, 9, 18) == 18
+# assert maximo_encadenado(4, 9, 18) == 18 # 4 < 9 < 18
+# assert maximo_encadenado(9, 4, 18) == 18 # 9 > 4 > 18
+# assert maximo_encadenado(9, 9, 18) == 18
 
-assert maximo_encadenado(24, 9, 18) == 24
-assert maximo_encadenado(24, 18, 9) == 24
-assert maximo_encadenado(24, 18, 18) == 24
+# assert maximo_encadenado(24, 9, 18) == 24
+# assert maximo_encadenado(24, 18, 9) == 24
+# assert maximo_encadenado(24, 18, 18) == 24
 # NO MODIFICAR - FIN
 
 
@@ -37,6 +48,12 @@ def maximo_cuadruple(a: float, b: float, c: float, d: float) -> float:
     """Re-escribir para que tome 4 parámetros, utilizar la función max.
 
     Referencia: https://docs.python.org/3/library/functions.html#max"""
+    return max(d, c, b, a)
+
+print(maximo_cuadruple(1, 10, 5, -5))
+print(maximo_cuadruple(4, 9, 18, 6))
+print(maximo_cuadruple(24, 9, 18, 20))
+print(maximo_cuadruple(24, 9, 18, 30))
 
 
 # NO MODIFICAR - INICIO

@@ -1,1 +1,2 @@
-for i in lista 
+if letra == "a" or "A":
+        return True

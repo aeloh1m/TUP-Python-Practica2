@@ -11,7 +11,16 @@ def maximo_recursivo(*args) -> float:
         - No utilizar la ninguna otra función salvo maximo_recursivo
         - Resolver de manera recursiva
     """
-
+    max = 999999999999
+    maxNum = 0
+    for x in args:
+        if maxNum > args[x]:
+            return maxNum
+    # for x in args:
+    #     if x > maxNum:
+    #         maxNum = x
+    return maximo_recursivo(args)
+print(maximo_recursivo(1, 10, 5, -5))
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":

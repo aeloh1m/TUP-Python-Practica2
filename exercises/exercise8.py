@@ -22,6 +22,14 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
         - Utilizar la función range.
         - Utilizar índices.
     """
+    respuesta = []
+    listado_tupla = []
+
+    for x in range(3):
+        listado_tupla = (nombres[x], precios[x])
+        respuesta.append(listado_tupla)
+    respuesta = tuple(respuesta)
+    return respuesta
 
 
 # NO MODIFICAR - INICIO
@@ -51,7 +59,14 @@ def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int])
 
     Referencia: https://docs.python.org/3/library/functions.html#enumerate
     """
+    respuesta = []
+    listado_tupla = []
 
+    for count, Value in enumerate(nombres):
+        listado_tupla = (Value,precios[count],ids[count])
+        respuesta.append(listado_tupla)
+    respuesta = tuple(respuesta)
+    return respuesta
 
 # NO MODIFICAR - INICIO
 respuesta = (

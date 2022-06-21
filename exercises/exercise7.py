@@ -68,11 +68,7 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
-    # newList = [any(lista_1) or any(lista_2)] return newList
-
-test_list = [1, "hello", 35.20]
-print(superposicion_in(test_list, (2, "world", 35.20)))
-print(superposicion_in(test_list, (2, "world", 30.85)))
+    return any([i==j for i in lista_1 for j in lista_2])
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
@@ -93,7 +89,7 @@ def superposicion_set(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset  # noqa: E501
     """
-
+    return set(lista_1) & set(lista_2)
 
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
